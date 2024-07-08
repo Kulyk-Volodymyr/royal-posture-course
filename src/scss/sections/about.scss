@@ -1,0 +1,153 @@
+.about {
+  @include basic-padding-inline;
+  @include scroll-margin;
+  padding-top: 3rem;
+  @include screen-min-768 {
+    padding-top: 4rem;
+  }
+  @include screen-min-1024 {
+    padding-top: 3.5rem;
+  }
+
+  &__inner {
+    @include max-width-medium;
+  }
+
+  &__title {
+    @include h2-text;
+    margin-bottom: 1.75rem;
+    @include screen-min-768 {
+      margin-bottom: 2rem;
+    }
+    @include screen-min-1024 {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    gap: 1.5rem;
+    margin: auto;
+    max-width: 290px;
+    @media screen and (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 680px;
+    }
+    @include screen-min-1024 {
+      column-gap: 4rem;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: none;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    @include screen-min-1024 {
+      margin-top: 4rem;
+    }
+  }
+}
+
+.aboutCard {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: space-between;
+  padding: 1rem 0 1rem 1rem;
+  position: relative;
+  @include screen-min-1024 {
+    flex-direction: row-reverse;
+    padding: 1rem 1rem 1rem 0;
+  }
+
+  &__border {
+    border: 1px solid $blue-200;
+    border-radius: 0.375rem;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 86%;
+    @include screen-min-1024 {
+      left: auto;
+      right: 0;
+      width: 77%;
+    }
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    position: relative;
+    @include screen-min-1024 {
+      width: 70%;
+    }
+  }
+
+  &__image {
+    height: 94px;
+    position: relative;
+  }
+
+  &__img {
+    display: block;
+    height: 100%;
+  }
+
+  &_order0 {
+    @include screen-min-1024 {
+      order: 0;
+    }
+  }
+
+  &_order1 {
+    @include screen-min-1024 {
+      order: 1;
+    }
+  }
+
+  &_order2 {
+    @include screen-min-1024 {
+      order: 2;
+    }
+  }
+
+  &_order3 {
+    @include screen-min-1024 {
+      order: 3;
+    }
+  }
+
+  &_order4 {
+    @include screen-min-1024 {
+      order: 4;
+    }
+  }
+
+  &_order5 {
+    @include screen-min-1024 {
+      order: 5;
+    }
+  }
+
+  &_order6 {
+    @include screen-min-1024 {
+      order: 6;
+    }
+  }
+
+  &_order7 {
+    @include screen-min-1024 {
+      order: 7;
+    }
+  }
+
+  &_order8 {
+    @include screen-min-1024 {
+      order: 8;
+    }
+  }
+}

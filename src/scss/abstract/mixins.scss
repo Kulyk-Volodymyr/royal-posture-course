@@ -1,0 +1,64 @@
+@mixin basic-padding-inline {
+  padding-inline: 1rem;
+  @include screen-min-480 {
+    padding-inline: 2.5rem;
+  }
+  @include screen-min-768 {
+    padding-inline: 5rem; //4.5
+  }
+  @include screen-min-1024 {
+    padding-inline: 4rem;
+  }
+  @include screen-min-1280 {
+    padding-inline: 4.5rem;
+  }
+}
+
+@mixin max-width-large {
+  @include screen-min-1024 {
+    margin: auto;
+    max-width: 1220px;
+  }
+}
+
+@mixin max-width-medium {
+  @include screen-min-1024 {
+    margin: auto;
+    max-width: 1100px;
+  }
+}
+
+@mixin max-width-small {
+  @include screen-min-1024 {
+    margin: auto;
+    max-width: 1020px;
+  }
+}
+
+@mixin h2-text($color: $blue-900) {
+  color: $color;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 400;
+  letter-spacing: -0.7px;
+  line-height: 1.3;
+  text-align: center;
+  @include screen-min-768 {
+    font-size: 2.5rem;
+  }
+}
+
+@mixin blue-section-with-shadow {
+  background-color: $blue-000;
+  box-shadow: 0 0 2rem rgba($gray, 0.1), 0 0 1rem rgba($blue-900, 0.2);
+}
+
+@mixin scroll-margin {
+  scroll-margin-top: $header-height-small;
+  @include screen-min-768 {
+    scroll-margin-top: $header-height-large;
+  }
+  @include screen-burger {
+    scroll-margin-top: 0;
+  }
+}

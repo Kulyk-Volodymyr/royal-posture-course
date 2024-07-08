@@ -1,0 +1,146 @@
+.experts {
+  @include basic-padding-inline;
+  @include blue-section-with-shadow;
+  @include scroll-margin;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  @include screen-min-768 {
+    padding-top: 4rem;
+  }
+
+  &__inner {
+    @include max-width-large;
+  }
+
+  &__title {
+    @include h2-text;
+    margin-bottom: 1.5rem;
+    @include screen-min-768 {
+      margin-bottom: 2.25rem;
+    }
+    @include screen-min-1024 {
+      margin-bottom: 4.5rem;
+    }
+  }
+
+  &__sliders {
+    @include screen-min-1024 {
+      display: flex;
+      flex-direction: row;
+      gap: 5rem;
+    }
+  }
+}
+
+.expert-info-slider {
+  @include screen-min-1024 {
+    flex: 1;
+  }
+  @include screen-min-1280 {
+    flex: 1.2;
+  }
+
+  &__slide {
+    height: auto;
+
+    &-inner {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+    }
+
+    &-image {
+      width: 100%;
+    }
+
+    &-photo {
+      border-radius: 0.625rem;
+      display: block;
+      width: 100%;
+    }
+
+    &-info {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+      margin-block: 0.5rem;
+      text-align: center;
+    }
+
+    &-profession {
+      font-family: "Oswald", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.5;
+      @include screen-min-768 {
+        font-size: 1.875rem;
+      }
+    }
+
+    &-name {
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
+  }
+
+  /* ===== Arrows ===== */
+  & .swiper-button-prev,
+  & .swiper-button-next {
+    top: auto;
+    bottom: 3.5rem;
+    height: 2.25rem;
+    width: fit-content;
+  }
+
+  & .swiper-button-prev::after,
+  & .swiper-button-next::after {
+    content: "";
+  }
+
+  &__arrow {
+    display: block;
+    height: auto;
+    width: 6.25rem;
+  }
+}
+
+.expert-details-slider {
+  padding: 1rem;
+  @include screen-min-1024 {
+    flex: 1;
+  }
+
+  &__slide {
+    &-inner {
+      background-color: $white;
+      box-shadow: 0 0.25rem 0.5rem rgba($gray, 0.2),
+        0 0.25rem 1rem rgba($blue-400, 0.2);
+      border-radius: 0.625rem;
+      margin: auto;
+      position: relative;
+      padding: 1.5rem 1rem;
+      width: fit-content;
+    }
+
+    &-text {
+      font-size: 1rem;
+      line-height: 1.5;
+
+      &_margin-bottom {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &-list {
+      &_margin-left_32 {
+        margin-left: 2rem;
+      }
+      &_margin-left_16 {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

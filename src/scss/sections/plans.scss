@@ -1,0 +1,195 @@
+.plans {
+  @include basic-padding-inline;
+  padding-top: 1rem;
+  padding-bottom: 2.75rem;
+  @include screen-min-768 {
+    padding-bottom: 7.5rem;
+  }
+
+  &__inner {
+    @include max-width-large;
+  }
+
+  &__title {
+    @include h2-text;
+    margin-bottom: 1.5rem;
+    @include screen-min-768 {
+      margin-bottom: 2rem;
+    }
+    @include screen-min-1024 {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__plans {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: auto;
+    max-width: 500px;
+    @include screen-min-1024 {
+      align-items: flex-start;
+      flex-direction: row;
+      gap: 3.5rem;
+      max-width: none;
+    }
+  }
+}
+
+.plan {
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba($blue-200, 0.25);
+  overflow: hidden;
+  @include screen-min-1024 {
+    flex: 1;
+  }
+
+  &__header {
+    background-color: $blue-900;
+    color: $white;
+    padding: 0.75rem 1rem 1.25rem 1rem;
+    text-align: center;
+  }
+
+  &__content {
+    padding: 1.5rem 0.75rem 0.75rem 0.75rem;
+    @include screen-min-1024 {
+      padding: 1.75rem 0.75rem 1.25rem 0.75rem;
+    }
+  }
+
+  &__title {
+    font-family: "Oswald", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  &__subtitle {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  &__icon-prize {
+    display: block;
+    height: auto;
+    width: 20px;
+  }
+
+  &__font {
+    &_oswald-40 {
+      font-family: "Oswald", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    &_oswald-36 {
+      font-family: "Oswald", sans-serif;
+      font-size: 2.25rem;
+      font-weight: 400;
+    }
+
+    &_oswald-36-red {
+      color: $red-dark;
+      font-family: "Oswald", sans-serif;
+      font-size: 2.25rem;
+      font-weight: 200;
+      text-decoration: line-through;
+    }
+
+    &_oswald-20 {
+      font-family: "Oswald", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    &_oswald-18 {
+      font-family: "Oswald", sans-serif;
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    &_libre-16 {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    &_libre-14 {
+      font-size: 0.875rem;
+    }
+
+    &_align-center {
+      text-align: center;
+    }
+
+    &_blue {
+      color: $blue-600;
+    }
+
+    &_gray {
+      color: $gray;
+    }
+
+    &_red {
+      color: $orange-400;
+    }
+  }
+
+  &__ul_margin-left {
+    margin-left: 1.5rem;
+  }
+
+  &__li {
+    &_with_borders {
+      border-top: 1px solid $gray;
+      border-bottom: 1px solid $gray;
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    &_style_none {
+      list-style: none;
+    }
+
+    &_style_close {
+      list-style: $list-close;
+    }
+
+    &_style_plus {
+      list-style: $list-plus;
+    }
+
+    &_style_prize {
+      list-style: $list-prize;
+    }
+  }
+
+  &__margin-bottom_24 {
+    margin-bottom: 1.5rem;
+  }
+
+  &__margin-bottom_16 {
+    margin-bottom: 1rem;
+  }
+
+  &__margin-bottom_8 {
+    margin-bottom: 0.5rem;
+  }
+
+  &__margin-bottom_4 {
+    margin-bottom: 0.25rem;
+  }
+
+  &__button-gap {
+    margin-bottom: 1.5rem;
+    @include screen-min-1024 {
+      margin-bottom: 2.5rem;
+    }
+  }
+}

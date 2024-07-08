@@ -1,0 +1,74 @@
+.effects {
+  @include basic-padding-inline;
+  padding-top: 3.25rem;
+  padding-bottom: 3rem;
+  @include screen-min-768 {
+    padding-top: 4rem;
+  }
+  @include screen-min-1280 {
+    padding-top: 3.25rem;
+    padding-bottom: 9.5rem;
+  }
+
+  &__inner {
+    @include max-width-large;
+  }
+
+  &__title {
+    @include h2-text;
+  }
+
+  &__effects {
+    display: grid;
+    row-gap: 1rem;
+    padding-block: 1.5rem;
+    @include screen-min-340 {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem;
+      margin: auto;
+      max-width: 500px;
+    }
+    @include screen-min-768 {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 2rem;
+      max-width: 780px;
+      padding-block: 2rem;
+    }
+    @include screen-min-1280 {
+      grid-template-columns: repeat(6, 1fr);
+      row-gap: 0;
+      max-width: none;
+      padding-block: 3rem;
+    }
+  }
+
+  &__effect {
+    text-align: center;
+    width: 100%;
+  }
+
+  &__illustration {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    @include screen-min-768 {
+      margin-bottom: 1.75rem;
+    }
+  }
+
+  &__image {
+    display: block;
+    height: 130px;
+    margin: auto;
+    width: auto;
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+}

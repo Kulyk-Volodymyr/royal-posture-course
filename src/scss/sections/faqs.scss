@@ -1,0 +1,179 @@
+.faqs {
+  @include basic-padding-inline;
+  @include scroll-margin;
+  background-color: $black;
+  color: $white;
+  padding-block: 3rem;
+  @include screen-min-768 {
+    padding-block: 4rem;
+  }
+  @include screen-min-1280 {
+    padding-top: 6rem;
+  }
+
+  &__inner {
+    @include max-width-large;
+  }
+
+  &__title {
+    @include h2-text($color: $white);
+
+    &_header {
+      margin-bottom: 1.5rem;
+      @include screen-min-768 {
+        margin-bottom: 2.25rem;
+      }
+      @include screen-min-1280 {
+        margin-bottom: 6rem;
+      }
+    }
+
+    &_question {
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      @include screen-min-768 {
+        margin-bottom: 2rem;
+      }
+      @include screen-min-1280 {
+        margin-top: 6rem;
+      }
+    }
+  }
+
+  &__questions {
+    @include screen-min-1280 {
+      align-items: flex-start;
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    &-container {
+      width: 100%;
+    }
+  }
+
+  &__illustration {
+    display: none;
+    @include screen-min-1280 {
+      display: block;
+    }
+  }
+
+  &__image {
+    border-radius: 0.5rem;
+    display: block;
+    height: auto;
+    width: 490px;
+  }
+
+  &__contact {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    @include screen-min-340 {
+      flex-direction: row;
+    }
+
+    &-icon {
+      display: block;
+      height: auto;
+      width: 49px;
+    }
+
+    &-text {
+      font-size: 1rem;
+      line-height: 2;
+    }
+  }
+}
+
+.question {
+  border-bottom: 1px solid $white;
+  padding: 3.5rem 1.25rem 1.5rem 1.25rem;
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &__header {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+    transition: 0.4s;
+  }
+
+  &__icon {
+    height: 14px;
+    position: relative;
+    width: 38px;
+
+    &-left {
+      background-color: $white;
+      height: 3px;
+      left: 20px;
+      position: absolute;
+      top: 0;
+      transform-origin: left center;
+      transform: rotate(150deg) translateY(0);
+      transition: 0.4s ease-out;
+      width: 22px;
+    }
+
+    &-right {
+      background-color: $white;
+      height: 3px;
+      left: 18px;
+      position: absolute;
+      top: 0;
+      transform-origin: left center;
+      transform: rotate(30deg) translateY(0);
+      transition: 0.4s ease-out;
+      width: 22px;
+    }
+  }
+
+  &[open] &__icon-left {
+    background-color: $orange-200;
+    transform: rotate(210deg);
+    top: 12px;
+  }
+
+  &[open] &__icon-right {
+    background-color: $orange-200;
+    transform: rotate(-30deg);
+    top: 12px;
+  }
+
+  &[open] &__title {
+    color: $orange-200;
+  }
+
+  &:hover &__title {
+    color: $orange-300;
+  }
+
+  &:hover &__icon-left {
+    background-color: $orange-300;
+  }
+
+  &:hover &__icon-right {
+    background-color: $orange-300;
+  }
+
+  &__answer {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+  }
+}

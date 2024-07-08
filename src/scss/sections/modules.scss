@@ -1,0 +1,196 @@
+.modules {
+  @include basic-padding-inline;
+  @include blue-section-with-shadow;
+  padding-top: 1.25rem;
+  padding-bottom: 3rem;
+  @include screen-min-768 {
+    padding-top: 4rem;
+    padding-bottom: 5.5rem;
+  }
+  @include screen-min-1024 {
+    padding-bottom: 4.5rem;
+  }
+
+  &__inner {
+    @include max-width-large;
+  }
+
+  &__title {
+    @include h2-text;
+  }
+
+  &__modules {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1.5rem auto 3.25rem auto;
+    max-width: 600px;
+    @include screen-min-768 {
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+    @include screen-min-1024 {
+      margin-top: 3rem;
+      margin-bottom: 3.5rem;
+      max-width: none;
+    }
+  }
+
+  &__info {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 600px;
+    margin: auto;
+    padding-inline: 1rem;
+  }
+
+  &__image {
+    display: block;
+    float: left;
+    height: 84px;
+    width: auto;
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+.module {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.75rem rgba($gray, 0.1), 0 0 0.75rem rgba($blue-900, 0.1);
+  overflow: hidden;
+  @include screen-min-1024 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__description {
+    background-color: $white;
+    flex: 1.3;
+    padding: 1rem;
+    @include screen-min-768 {
+      padding: 1.25rem 1.5rem;
+    }
+  }
+
+  &__bonuses {
+    background-color: $blue-100;
+    flex: 1;
+    padding: 1rem;
+    @include screen-min-768 {
+      padding: 1.25rem 1.75rem;
+    }
+    @include screen-min-1024 {
+      padding: 1.25rem 2.5rem;
+    }
+  }
+
+  &__results {
+    background-color: $blue-500;
+    background-image: linear-gradient($blue-900, $blue-500);
+    flex: 1.1;
+    padding: 1rem;
+    @include screen-min-768 {
+      padding: 1.25rem 1.15rem;
+    }
+  }
+
+  &__title {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.5;
+
+    &_margin-top {
+      margin-top: 1rem;
+    }
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  &__icon {
+    display: block;
+  }
+
+  &__list {
+    margin-top: 1rem;
+    @include screen-min-768 {
+      margin-top: 1.25rem;
+    }
+
+    &_style_star {
+      list-style: $blue-star;
+      position: relative;
+
+      & li:not(:last-child)::after {
+        background-color: $blue-600;
+        content: "";
+        height: calc(100% + 0.5rem);
+        left: -0.75rem;
+        position: absolute;
+        top: 0.75rem;
+        width: 1px;
+      }
+    }
+
+    &_style_none {
+      list-style: none;
+    }
+
+    &:not(.module__list_style_none) {
+      margin-left: 1rem;
+    }
+  }
+
+  &__list-item {
+    font-size: 1rem;
+    line-height: 1.5;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__illustration {
+    margin-bottom: 0.75rem;
+  }
+
+  &__image {
+    border-radius: 0.5rem;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    @include screen-min-480 {
+      height: 250px;
+    }
+    @include screen-min-1024 {
+      height: 210px;
+    }
+
+    &_position_bottom {
+      object-position: bottom;
+    }
+
+    &_position_top {
+      object-position: top;
+    }
+  }
+
+  &_color_blue {
+    color: $blue-500;
+  }
+
+  &_color_white {
+    color: $white;
+  }
+}

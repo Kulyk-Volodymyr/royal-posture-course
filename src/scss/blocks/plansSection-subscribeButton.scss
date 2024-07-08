@@ -1,0 +1,29 @@
+.plansSection-subscribeButton {
+  background-image: linear-gradient($blue-300, $blue-800);
+  border: none;
+  border-radius: 2rem;
+  color: $white;
+  cursor: pointer;
+  display: block;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: auto;
+  max-width: 21rem;
+  outline: none;
+  padding: 1.125rem 1rem;
+  transition: 0.4s;
+  width: 100%;
+
+  &:hover {
+    background-image: linear-gradient($blue-100, $blue-800);
+  }
+
+  &:active {
+    background-image: linear-gradient(
+      $orange-button-light,
+      $orange-button-dark
+    );
+  }
+}

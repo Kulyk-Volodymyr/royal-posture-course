@@ -1,0 +1,94 @@
+.footer {
+  @include basic-padding-inline;
+  background-color: $black;
+  box-shadow: 0px 0px 10px rgba($white, 0.25);
+  color: $white;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  @include screen-min-768 {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+  @include screen-min-1280 {
+    padding-top: 3rem;
+  }
+
+  &__inner {
+    @include max-width-large;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: flex-start;
+    @include screen-min-768 {
+      flex-direction: row;
+    }
+    @include screen-min-1280 {
+      gap: 12rem;
+    }
+  }
+
+  &__logo {
+    height: 100px;
+    &-img {
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__text {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75;
+
+    &_line-height {
+      line-height: 2.2;
+    }
+  }
+
+  &__info {
+    @include screen-min-1280 {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto;
+      gap: 2.5rem;
+      width: 100%;
+    }
+  }
+
+  &__payment {
+    margin-top: 2.75rem;
+    margin-bottom: 3rem;
+    @include screen-min-1280 {
+      grid-column: 2/3;
+      margin-top: 4.5rem;
+      margin-bottom: 0rem;
+      width: 280px;
+    }
+  }
+
+  &__copyright {
+    @include screen-min-1280 {
+      margin-top: -4.5rem;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1.75rem;
+    @include screen-min-1280 {
+      margin-top: 1rem;
+    }
+  }
+
+  &__card {
+    display: block;
+    height: auto;
+    width: 70px;
+  }
+}

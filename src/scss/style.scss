@@ -1,0 +1,39 @@
+@import "./abstract/variables";
+@import "./abstract/mixins";
+@import "./abstract/responsive";
+
+@import "../../node_modules/swiper/swiper-bundle.min";
+
+$bg-img-1: url("@img/heroBg.jpg");
+$bg-specialists-xsmall: url("@img/bg-specialists-xsmall.jpg");
+$bg-specialists-small: url("@img/bg-specialists-small.jpg");
+$bg-specialists-mobile: url("@img/bg-specialists-mobile.jpg");
+$bg-specialists-tablet: url("@img/bg-specialists-tablet.jpg");
+$blue-star: url("@img/icons/star-blue.png");
+$gray-star: url("@img/icons/star-gray.png");
+$list-close: url("@img/icons/list-close.png");
+$list-plus: url("@img/icons/list-plus.png");
+$list-prize: url("@img/icons/list-prize.png");
+
+@import "./base/fonts";
+@import "./base/normalize.scss";
+@import "./base/global.scss";
+
+@import "./blocks/orange-button";
+@import "./blocks/plansSection-joinButton";
+@import "./blocks/plansSection-subscribeButton";
+
+@import "./sections/header";
+@import "./sections/hero";
+@import "./sections/about";
+@import "./sections/warning";
+@import "./sections/modules";
+@import "./sections/specialists";
+@import "./sections/effects";
+@import "./sections/experts";
+@import "./sections/comparison";
+@import "./sections/plans";
+@import "./sections/options";
+@import "./sections/results";
+@import "./sections/faqs";
+@import "./sections/footer";

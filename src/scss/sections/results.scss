@@ -1,0 +1,92 @@
+.results {
+  @include basic-padding-inline;
+  @include scroll-margin;
+  background-color: $blue-100;
+  padding-block: 3rem;
+  @include screen-min-768 {
+    padding-block: 4.25rem;
+  }
+
+  &__inner {
+    @include max-width-medium;
+    margin: auto;
+    max-width: 600px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    @include screen-min-768 {
+      gap: 2.5rem;
+    }
+    @include screen-min-1024 {
+      flex-direction: row;
+    }
+    @include screen-min-1280 {
+      gap: 3.5rem;
+    }
+  }
+
+  &__illustration {
+    width: 100%;
+  }
+
+  &__image {
+    border-radius: 0.5rem;
+    display: block;
+    width: 100%;
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    @include screen-min-1024 {
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+
+    &-icon {
+      display: block;
+    }
+
+    &-text {
+      font-family: "Oswald", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  &__container {
+    max-width: 350px;
+  }
+
+  &__list {
+    margin: 0.25rem 0 0 1.5rem;
+
+    & li:not(:last-child) {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    @include screen-min-1024 {
+      margin-top: 3.25rem;
+    }
+  }
+}

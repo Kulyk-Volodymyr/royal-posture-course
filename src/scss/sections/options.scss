@@ -1,0 +1,132 @@
+.options {
+  @include basic-padding-inline;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  @include screen-min-768 {
+    padding-bottom: 4rem;
+  }
+
+  &__inner {
+    @include max-width-large;
+  }
+
+  &__header {
+    @include h2-text;
+    margin-bottom: 1.5rem;
+    @include screen-min-768 {
+      margin-bottom: 2.25rem;
+    }
+    @include screen-min-1024 {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__articles {
+    display: grid;
+    gap: 1rem;
+    margin: auto;
+    max-width: 400px;
+    @include screen-min-768 {
+      gap: 1.5rem;
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 700px;
+    }
+    @include screen-min-1024 {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: none;
+    }
+  }
+
+  &__article {
+    border: 1px solid $blue-300;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding-top: 1.5rem;
+    padding-inline: 1.25rem;
+    position: relative;
+    @include screen-min-768 {
+      padding-top: 2rem;
+      padding-inline: 2rem;
+    }
+
+    &_padding-bottom_first {
+      padding-bottom: 10rem;
+      @include screen-min-768 {
+        padding-bottom: 1.25rem;
+      }
+    }
+
+    &_padding-bottom_middle {
+      padding-bottom: 1.25rem;
+      @include screen-min-768 {
+        padding-bottom: 2rem;
+      }
+    }
+
+    &_padding-bottom_last {
+      padding-bottom: 13rem;
+      @include screen-min-768 {
+        padding-bottom: 18rem;
+      }
+    }
+  }
+
+  &__title {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+
+    &-icon {
+      display: block;
+    }
+
+    &-text {
+      font-family: "Oswald", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+  }
+
+  &__info {
+    font-size: 1rem;
+    line-height: 1.5;
+    position: relative;
+  }
+
+  &__mobile {
+    bottom: -1.5rem;
+    left: 34%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 96px;
+    @include screen-min-768 {
+      bottom: 0;
+      left: 0;
+      margin: 1.5rem auto 0 auto;
+      position: relative;
+      transform: translateX(0);
+      width: 130px;
+    }
+  }
+
+  &__fruits {
+    bottom: 0;
+    left: 62%;
+    position: absolute;
+    transform: translate(-50%, 0.5rem) rotate(5deg);
+    width: 180px;
+    @include screen-min-768 {
+      left: 50%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  }
+
+  &__image {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}

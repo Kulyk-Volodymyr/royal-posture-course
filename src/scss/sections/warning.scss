@@ -1,0 +1,109 @@
+.warning {
+  @include basic-padding-inline;
+  padding-top: 4.5rem;
+  padding-bottom: 5rem;
+  @include screen-min-768 {
+    padding-top: 2.5rem;
+    padding-bottom: 4.5rem;
+  }
+  @include screen-min-1024 {
+    padding-top: 4.25rem;
+    padding-bottom: 5rem;
+  }
+
+  &__inner {
+    @include max-width-small;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    @include screen-min-768 {
+      gap: 2.5rem;
+    }
+    @include screen-min-1024 {
+      flex-direction: row;
+      gap: 5rem;
+    }
+  }
+
+  &__title {
+    @include h2-text;
+    @include screen-min-1024 {
+      text-align: left;
+      min-width: 290px;
+    }
+
+    &::first-letter {
+      color: $red-icon;
+      font-size: 2.5rem;
+      font-weight: 600;
+      @include screen-min-768 {
+        font-size: 3.25rem;
+      }
+    }
+  }
+
+  &__warnings {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 2rem;
+    max-width: 500px;
+    margin: auto;
+    @include screen-min-768 {
+      flex-direction: row;
+      max-width: none;
+      padding-right: 0.5rem;
+    }
+    @include screen-min-1024 {
+      padding-right: 0;
+      gap: 3rem;
+    }
+  }
+
+  &__item {
+    background-color: $blue-000;
+    border: 1px solid $blue-200;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    position: relative;
+    @include screen-min-768 {
+      flex: 1;
+    }
+
+    &Title {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    &Icon {
+      display: block;
+      height: 30px;
+      margin-inline: 0.5rem;
+    }
+  }
+
+  &__closed {
+    display: block;
+    left: -2rem;
+    position: absolute;
+    top: 0;
+    width: 50px;
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    position: relative;
+
+    &Close::first-letter {
+      color: $red-icon;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-left: 0.5rem;
+      line-height: 1;
+    }
+  }
+}
