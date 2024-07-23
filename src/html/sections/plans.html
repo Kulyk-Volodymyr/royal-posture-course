@@ -51,7 +51,18 @@
 
           <p class="plan__font_oswald-36 plan__button-gap">$49</p>
 
-          @@include('../blocks/plansSection-joinButton.html', {})
+          <button class="plansSection-joinButton" id="button-plan-i-myself">
+            <span class="plansSection-joinButton__text"
+              >Join with a special price</span
+            >
+            <div class="plansSection-joinButton__image">
+              <img
+                src="@img/icons/fingerprint.png"
+                alt=""
+                class="plansSection-joinButton__icon"
+              />
+            </div>
+          </button>
         </div>
       </section>
 
@@ -147,7 +158,12 @@
             </li>
           </ul>
 
-          @@include('../blocks/plansSection-subscribeButton.html', {})
+          <button
+            class="plansSection-subscribeButton"
+            id="button-plan-all-inclusive"
+          >
+            Subscribe
+          </button>
         </div>
       </section>
 
@@ -197,7 +213,9 @@
             </li>
           </ul>
 
-          @@include('../blocks/plansSection-subscribeButton.html', {})
+          <button class="plansSection-subscribeButton" id="button-plan-vip">
+            Subscribe
+          </button>
         </div>
       </section>
     </div>

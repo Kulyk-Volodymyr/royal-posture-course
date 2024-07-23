@@ -1,0 +1,93 @@
+<dialog class="dialog" id="dialog-plan-vip">
+  <div class="dialog__inner">
+    <button class="dialog__close-button" id="close-dialog-plan-vip">
+      <img
+        src="@img/icons/dialog-close.png"
+        alt=""
+        class="dialog__close-icon"
+      />
+    </button>
+
+    <p
+      class="dialog__title dialog__title_large dialog__title_blue dialog__title_max-width"
+    >
+      SIGN UP FOR PRELIMINARY LIST OF PARTICIPANTS
+    </p>
+
+    <div class="dialog__subtitle">
+      <p class="dialog__title dialog__title_medium dialog__title_blue">
+        Your plan
+      </p>
+      <p class="dialog__title dialog__title_large dialog__title_red">“VIP”</p>
+    </div>
+
+    <form class="dialog__form" method="dialog" id="vip-form">
+      <label for="vip-name" class="dialog__form-label">Your name</label>
+      <input
+        type="text"
+        name="vip-name"
+        id="vip-name"
+        class="dialog__form-input"
+        required
+      />
+
+      <label for="vip-phone" class="dialog__form-label">Your phone</label>
+      <input
+        type="tel"
+        name="vip-phone"
+        id="vip-phone"
+        class="dialog__form-input"
+      />
+
+      <label for="vip-email" class="dialog__form-label">Your e-mail</label>
+      <input
+        type="email"
+        name="vip-email"
+        id="vip-email"
+        class="dialog__form-input"
+        required
+      />
+
+      <label for="vip-message" class="dialog__form-label">
+        What problem do you want to solve in the course?
+      </label>
+      <textarea
+        name="vip-message"
+        id="vip-message"
+        class="dialog__form-input"
+        rows="3"
+      ></textarea>
+
+      <div class="dialog__form-checkbox dialog__form-checkbox_margin-top">
+        <input
+          type="checkbox"
+          id="vip-privacy"
+          class="dialog__form-checkbox-check"
+          required
+        />
+        <label for="vip-privacy" class="dialog__form-checkbox-label">
+          I agree to the processing of personal data in accordance with the
+          Privacy Policy
+        </label>
+      </div>
+
+      <div class="dialog__form-checkbox dialog__form-checkbox_margin-bottom">
+        <input
+          type="checkbox"
+          id="vip-agreement"
+          class="dialog__form-checkbox-check"
+          required
+        />
+        <label for="vip-agreement" class="dialog__form-checkbox-label">
+          I accept the offer agreement
+        </label>
+      </div>
+
+      <button class="plansSection-subscribeButton" id="vip-submit">
+        Subscribe
+      </button>
+    </form>
+
+    <p class="dialog__course-start">Start February 12</p>
+  </div>
+</dialog>

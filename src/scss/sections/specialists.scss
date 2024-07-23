@@ -18,7 +18,7 @@
     padding-bottom: 1.5rem;
   }
   @include screen-min-1024 {
-    background-image: none;
+    background-image: none !important;
     padding-top: 4.5rem;
     padding-bottom: 1.5rem;
   }
