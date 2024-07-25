@@ -58,7 +58,4 @@
   @include screen-min-768 {
     scroll-margin-top: $header-height-large;
   }
-  @include screen-burger {
-    scroll-margin-top: 0;
-  }
 }

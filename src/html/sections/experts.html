@@ -12,6 +12,7 @@
                   src="@img/section-experts/expert-1.jpg"
                   alt="girl in yoga position"
                   class="expert-info-slider__slide-photo"
+                  loading="lazy"
                 />
               </div>
               <div class="expert-info-slider__slide-info">
@@ -28,6 +29,7 @@
                   src="@img/section-experts/expert-2.jpg"
                   alt="smiling girl"
                   class="expert-info-slider__slide-photo"
+                  loading="lazy"
                 />
               </div>
               <div class="expert-info-slider__slide-info">
@@ -46,6 +48,7 @@
                   src="@img/section-experts/expert-3.jpg"
                   alt="a doctor with a spinal dummy"
                   class="expert-info-slider__slide-photo"
+                  loading="lazy"
                 />
               </div>
               <div class="expert-info-slider__slide-info">
@@ -62,6 +65,7 @@
                   src="@img/section-experts/expert-4.jpg"
                   alt="smiling girl"
                   class="expert-info-slider__slide-photo"
+                  loading="lazy"
                 />
               </div>
               <div class="expert-info-slider__slide-info">
@@ -80,6 +84,7 @@
                   src="@img/section-experts/expert-5.jpg"
                   alt="a doctor with a spinal dummy"
                   class="expert-info-slider__slide-photo"
+                  loading="lazy"
                 />
               </div>
               <div class="expert-info-slider__slide-info">
@@ -98,6 +103,7 @@
                   src="@img/section-experts/expert-6.jpg"
                   alt="smiling girl"
                   class="expert-info-slider__slide-photo"
+                  loading="lazy"
                 />
               </div>
               <div class="expert-info-slider__slide-info">
@@ -116,6 +122,7 @@
                   src="@img/section-experts/expert-7.jpg"
                   alt="smiling girl with fruits"
                   class="expert-info-slider__slide-photo"
+                  loading="lazy"
                 />
               </div>
               <div class="expert-info-slider__slide-info">
@@ -127,18 +134,31 @@
         </div>
 
         <div class="swiper-button-prev expert-info-swiper-button-prev">
-          <img
-            src="@img/icons/slider-arrow-left.png"
-            alt="arrow"
-            class="expert-info-slider__arrow"
-          />
+          <picture>
+            <source
+              srcset="@img/icons/slider-arrow-left-small-black.png"
+              media="(max-width:399px)"
+            />
+            <img
+              src="@img/icons/slider-arrow-left.png"
+              alt="arrow"
+              class="expert-info-slider__arrow"
+            />
+          </picture>
         </div>
+
         <div class="swiper-button-next expert-info-swiper-button-next">
-          <img
-            src="@img/icons/slider-arrow-right.png"
-            alt="arrow"
-            class="expert-info-slider__arrow"
-          />
+          <picture>
+            <source
+              srcset="@img/icons/slider-arrow-right-small-black.png"
+              media="(max-width:399px)"
+            />
+            <img
+              src="@img/icons/slider-arrow-right.png"
+              alt="arrow"
+              class="expert-info-slider__arrow"
+            />
+          </picture>
         </div>
       </div>
 

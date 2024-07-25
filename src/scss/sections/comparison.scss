@@ -66,10 +66,14 @@
   /* ===== Arrows ===== */
   & .swiper-button-prev,
   & .swiper-button-next {
-    top: auto;
-    bottom: 0;
-    height: 2.5rem;
-    width: fit-content;
+    visibility: hidden;
+    @include screen-min-480 {
+      visibility: visible;
+      top: auto;
+      bottom: 0rem;
+      height: 2.5rem;
+      width: fit-content;
+    }
   }
 
   & .swiper-button-prev::after,
@@ -88,7 +92,10 @@
     bottom: 0;
     position: relative;
     margin-top: 3rem;
-    width: 300px !important;
+    width: 18.75rem !important;
+    @include screen-min-768 {
+      width: 30rem !important;
+    }
     @include screen-min-1024 {
       margin-top: 4rem;
     }

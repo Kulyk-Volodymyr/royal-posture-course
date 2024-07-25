@@ -29,9 +29,9 @@
 
   &__title {
     @include h2-text;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     @include screen-min-768 {
-      margin-bottom: 2.25rem;
+      margin-bottom: 2.5rem;
     }
     @include screen-min-1024 {
       margin-bottom: 3rem;

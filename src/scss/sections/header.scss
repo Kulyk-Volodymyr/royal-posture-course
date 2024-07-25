@@ -20,9 +20,6 @@
   @include screen-min-768 {
     height: $header-height-large;
   }
-  @include screen-burger {
-    position: absolute;
-  }
 
   &__inner {
     @include _header-flex();

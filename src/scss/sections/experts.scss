@@ -33,6 +33,10 @@
 }
 
 .expert-info-slider {
+  padding-bottom: 2rem;
+  @include screen-min-340 {
+    padding-bottom: 0;
+  }
   @include screen-min-1024 {
     flex: 1;
   }
@@ -90,9 +94,12 @@
   & .swiper-button-prev,
   & .swiper-button-next {
     top: auto;
-    bottom: 3.5rem;
+    bottom: -0.25rem;
     height: 2.25rem;
     width: fit-content;
+    @include screen-min-340 {
+      bottom: 3.5rem;
+    }
   }
 
   & .swiper-button-prev::after,
@@ -103,7 +110,10 @@
   &__arrow {
     display: block;
     height: auto;
-    width: 6.25rem;
+    width: 3.125rem;
+    @include screen-min-480 {
+      width: 6.25rem;
+    }
   }
 }
 

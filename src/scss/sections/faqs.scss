@@ -59,7 +59,7 @@
   &__illustration {
     display: none;
     position: sticky;
-    top: 1rem;
+    top: 7rem;
     @include screen-min-1024 {
       display: block;
     }
@@ -168,36 +168,6 @@
       }
     }
   }
-
-  /*
-  &[open] &__icon-left {
-    background-color: $orange-200;
-    transform: rotate(150deg);
-    top: 0px;
-  }
-
-  &[open] &__icon-right {
-    background-color: $orange-200;
-    transform: rotate(30deg);
-    top: 0px;
-  }
-
-  &[open] &__title {
-    color: $orange-200;
-  }
-
-  &:hover &__title {
-    color: $orange-300;
-  }
-
-  &:hover &__icon-left {
-    background-color: $orange-300;
-  }
-
-  &:hover &__icon-right {
-    background-color: $orange-300;
-  }
-  */
 
   &[open] &__icon-left {
     transform: rotate(150deg);

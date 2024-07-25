@@ -32,11 +32,23 @@
     @media screen and (min-width: 640px) {
       grid-template-columns: repeat(2, 1fr);
       max-width: 680px;
+
+      & .aboutCard:last-child {
+        grid-column: span 2;
+        justify-self: center;
+        width: 50%;
+      }
     }
     @include screen-min-1024 {
       column-gap: 4rem;
       grid-template-columns: repeat(3, 1fr);
       max-width: none;
+
+      & .aboutCard:last-child {
+        grid-column: auto;
+        justify-self: auto;
+        width: auto;
+      }
     }
   }
 
@@ -90,6 +102,16 @@
   &__image {
     height: 94px;
     position: relative;
+
+    &_second-image {
+      @include screen-min-1024 {
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  &_gap {
+    gap: 1.5rem;
   }
 
   &__img {
