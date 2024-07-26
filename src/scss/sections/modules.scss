@@ -1,5 +1,6 @@
 .modules {
   @include basic-padding-inline;
+  @include scroll-margin;
   @include blue-section-with-shadow;
   padding-top: 1.25rem;
   padding-bottom: 3rem;

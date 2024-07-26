@@ -29,15 +29,21 @@
 .comparison-slider {
   &__slide {
     &-inner {
+      align-items: center;
+      border-radius: 0.625rem;
+      display: flex;
+      height: 21.25rem;
+      justify-content: center;
       margin: auto;
+      max-width: 21.25rem;
+      overflow: hidden;
       position: relative;
-      width: fit-content;
     }
 
     &-image {
-      border-radius: 0.625rem;
       display: block;
-      position: relative;
+      height: 100%;
+      width: auto;
     }
 
     &-text {

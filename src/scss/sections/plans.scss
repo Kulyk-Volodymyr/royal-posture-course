@@ -1,5 +1,6 @@
 .plans {
   @include basic-padding-inline;
+  @include scroll-margin;
   padding-top: 1rem;
   padding-bottom: 2.75rem;
   @include screen-min-768 {
