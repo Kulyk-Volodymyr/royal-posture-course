@@ -34,7 +34,7 @@
 
 .expert-info-slider {
   padding-bottom: 2rem;
-  @include screen-min-340 {
+  @include screen-min-360 {
     padding-bottom: 0;
   }
   @include screen-min-1024 {
@@ -97,7 +97,7 @@
     bottom: -0.25rem;
     height: 2.25rem;
     width: fit-content;
-    @include screen-min-340 {
+    @include screen-min-360 {
       bottom: 3.5rem;
     }
   }

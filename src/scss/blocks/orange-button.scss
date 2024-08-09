@@ -11,7 +11,7 @@
   outline: none;
   padding: 0.5rem 2rem;
   transition: 0.4s;
-  @include screen-min-340 {
+  @include screen-min-360 {
     padding: 0.5rem 4.625rem;
   }
 

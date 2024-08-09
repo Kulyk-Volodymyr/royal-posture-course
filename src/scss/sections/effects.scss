@@ -22,7 +22,7 @@
     display: grid;
     row-gap: 1rem;
     padding-block: 1.5rem;
-    @include screen-min-340 {
+    @include screen-min-360 {
       grid-template-columns: repeat(2, 1fr);
       column-gap: 2rem;
       margin: auto;

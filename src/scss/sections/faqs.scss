@@ -81,7 +81,7 @@
     flex-direction: column;
     gap: 1.5rem;
     justify-content: center;
-    @include screen-min-340 {
+    @include screen-min-360 {
       flex-direction: row;
     }
 

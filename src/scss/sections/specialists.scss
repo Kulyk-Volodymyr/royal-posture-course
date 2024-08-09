@@ -6,7 +6,7 @@
   background-size: contain;
   padding-top: 3rem;
   padding-bottom: 1.5rem;
-  @include screen-min-340 {
+  @include screen-min-360 {
     background-image: $bg-specialists-small;
   }
   @include screen-min-480 {

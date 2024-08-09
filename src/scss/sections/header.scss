@@ -42,17 +42,16 @@
     backdrop-filter: blur(5px);
     border-bottom-left-radius: 0.5rem;
     gap: 1.25rem;
-    padding: 2rem 1.5rem 2rem 1rem;
+    padding: 2rem;
     position: absolute;
     right: 0;
     top: $header-height-small;
     z-index: 2;
     @include screen-min-480 {
-      padding-right: 3rem;
+      padding-inline: 3rem;
     }
     @include screen-min-768 {
-      padding-right: 5.5rem;
-      padding-left: 2.5rem;
+      padding-inline: 5.5rem;
       top: $header-height-large;
     }
     @include screen-burger {
