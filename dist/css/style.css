@@ -2267,17 +2267,30 @@ body {
 }
 
 .module__list_style_star {
-  list-style: url("../img/icons/star-blue.png");
+  list-style: none;
   position: relative;
 }
 
-.module__list_style_star li:not(:last-child)::after {
+.no-webp .module__list_style_star li::after {
+  background: url("../img/icons/star-blue.png") 100% no-repeat; }
+
+.module__list_style_star li::after {
+  content: "";
+  display: inline-block;
+  height: 12px;
+  left: -18px;
+  position: absolute;
+  top: 8px;
+  width: 12px;
+}
+
+.module__list_style_star li:not(:last-child)::before {
   background-color: #2790cd;
   content: "";
-  height: calc(100% + 0.5rem);
-  left: -12.5px;
+  height: calc(100% + 8px);
+  left: -12px;
   position: absolute;
-  top: 0.75rem;
+  top: 12px;
   width: 1px;
 }
 
@@ -4680,6 +4693,8 @@ body {
 }
 
 .webp .hero { background-image: url(../img/bg-hero-mobile.webp); }
+
+.webp .module__list_style_star li::after { background: url(../img/icons/star-blue.webp) 100% no-repeat; }
 
 .webp .specialists { background-image: url(../img/bg-specialists-xsmall.webp); }
 

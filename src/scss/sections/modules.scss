@@ -129,16 +129,28 @@
     }
 
     &_style_star {
-      list-style: $blue-star;
+      //list-style: $blue-star;
+      list-style: none;
       position: relative;
 
-      & li:not(:last-child)::after {
+      & li::after {
+        background: $blue-star 100% no-repeat;
+        content: "";
+        display: inline-block;
+        height: 12px;
+        left: -18px;
+        position: absolute;
+        top: 8px;
+        width: 12px;
+      }
+
+      & li:not(:last-child)::before {
         background-color: $blue-600;
         content: "";
-        height: calc(100% + 0.5rem);
-        left: -12.5px;
+        height: calc(100% + 8px);
+        left: -12px;
         position: absolute;
-        top: 0.75rem;
+        top: 12px;
         width: 1px;
       }
     }
