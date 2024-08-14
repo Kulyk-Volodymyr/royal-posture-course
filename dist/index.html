@@ -6,54 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <title>Royal Postureand Young Face</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20240814111641" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20240814172105" />
   </head>
   <body>
-    <header class="header">
-  <div class="header__inner">
-    <div class="header__logo">
-      <a href="/#hero">
-        <img src="img/logo.png" alt="logo" class="header__logo-img"
-      /></a>
+    <div
+      id="preload"
+      style="
+        align-items: center;
+        background-color: #fafafa;
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        justify-content: center;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 20;
+      "
+    >
+      <p style="color: #0e5b87; font-size: 2rem; font-weight: 600">
+        Loading...
+      </p>
     </div>
-
-    <div class="header__items header__items_hidden">
-      <nav>
-        <ul class="header__list">
-          <li class="header__list-item">
-            <a href="/#about" class="header__list-link">About</a>
-          </li>
-          <li class="header__list-item">
-            <a href="/#modules" class="header__list-link">Modules</a>
-          </li>
-          <li class="header__list-item">
-            <a href="/#experts" class="header__list-link">Experts</a>
-          </li>
-          <li class="header__list-item">
-            <a href="/#plans" class="header__list-link">Plans</a>
-          </li>
-          <li class="header__list-item">
-            <a href="/#results" class="header__list-link">Results</a>
-          </li>
-          <li class="header__list-item">
-            <a href="/#faqs" class="header__list-link">FAQ</a>
-          </li>
-        </ul>
-      </nav>
-
-      <a class="header__join-btn">JOIN NOW</a>
-    </div>
-
-    <div class="header__burger" id="burger-button" role="switch">
-      <div class="header__burger-bar1"></div>
-      <div class="header__burger-bar2"></div>
-      <div class="header__burger-bar3"></div>
-    </div>
-  </div>
-</header>
-
-    <main>
-      <dialog class="dialog" id="dialog-plan-i-myself">
+    <dialog class="dialog" id="dialog-plan-i-myself">
   <div class="dialog__inner">
     <button class="dialog__close-button" id="close-dialog-plan-i-myself">
       <img
@@ -158,7 +134,7 @@
   </div>
 </dialog>
 
-      <dialog class="dialog" id="dialog-plan-all-inclusive">
+    <dialog class="dialog" id="dialog-plan-all-inclusive">
   <div class="dialog__inner">
     <button class="dialog__close-button" id="close-dialog-plan-all-inclusive">
       <img
@@ -256,7 +232,7 @@
   </div>
 </dialog>
 
-      <dialog class="dialog" id="dialog-plan-vip">
+    <dialog class="dialog" id="dialog-plan-vip">
   <div class="dialog__inner">
     <button class="dialog__close-button" id="close-dialog-plan-vip">
       <img
@@ -350,7 +326,7 @@
   </div>
 </dialog>
 
-      <dialog class="dialog" id="dialog-submit-response">
+    <dialog class="dialog" id="dialog-submit-response">
   <div class="dialog__inner">
     <button class="dialog__close-button" id="close-dialog-submit-response">
       <img
@@ -376,6 +352,50 @@
   </div>
 </dialog>
 
+    <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/#hero">
+        <img src="img/logo.png" alt="logo" class="header__logo-img"
+      /></a>
+    </div>
+
+    <div class="header__items header__items_hidden">
+      <nav>
+        <ul class="header__list">
+          <li class="header__list-item">
+            <a href="/#about" class="header__list-link">About</a>
+          </li>
+          <li class="header__list-item">
+            <a href="/#modules" class="header__list-link">Modules</a>
+          </li>
+          <li class="header__list-item">
+            <a href="/#experts" class="header__list-link">Experts</a>
+          </li>
+          <li class="header__list-item">
+            <a href="/#plans" class="header__list-link">Plans</a>
+          </li>
+          <li class="header__list-item">
+            <a href="/#results" class="header__list-link">Results</a>
+          </li>
+          <li class="header__list-item">
+            <a href="/#faqs" class="header__list-link">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+
+      <a class="header__join-btn">JOIN NOW</a>
+    </div>
+
+    <div class="header__burger" id="burger-button" role="switch">
+      <div class="header__burger-bar1"></div>
+      <div class="header__burger-bar2"></div>
+      <div class="header__burger-bar3"></div>
+    </div>
+  </div>
+</header>
+
+    <main>
       <section class="hero" id="hero">
   <div class="hero__inner">
     <div class="hero__info">
@@ -2467,6 +2487,6 @@
 </footer>
 
 
-    <script src="js/app.min.js?_v=20240814111641"></script>
+    <script src="js/app.min.js?_v=20240814172105"></script>
   </body>
 </html>
