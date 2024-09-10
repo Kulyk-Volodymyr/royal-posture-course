@@ -5,10 +5,20 @@
   justify-content: $justify;
 }
 
-.header {
-  @include basic-padding-inline;
+@mixin _header-backdrop {
   background-color: rgba($white, 0.75);
   backdrop-filter: blur(5px);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.header {
+  @include basic-padding-inline;
   height: $header-height-small;
   min-width: 260px;
   left: 0;
@@ -19,6 +29,10 @@
   z-index: 10;
   @include screen-min-768 {
     height: $header-height-large;
+  }
+
+  &::before {
+    @include _header-backdrop;
   }
 
   &__inner {
@@ -38,10 +52,9 @@
 
   &__items {
     @include _header-flex($direction: column, $align: flex-end);
-    background-color: rgba($white, 0.75);
-    backdrop-filter: blur(5px);
     border-bottom-left-radius: 0.5rem;
     gap: 1.25rem;
+    overflow: hidden;
     padding: 2rem;
     position: absolute;
     right: 0;
@@ -55,6 +68,7 @@
       top: $header-height-large;
     }
     @include screen-burger {
+      align-items: center;
       background-color: transparent;
       backdrop-filter: none;
       border-bottom-left-radius: none;
@@ -80,6 +94,14 @@
 
     &_visible {
       transform: translateX(0px);
+    }
+
+    &::before {
+      @include _header-backdrop;
+      @include screen-burger {
+        background-color: transparent;
+        backdrop-filter: none;
+      }
     }
   }
 
@@ -116,12 +138,17 @@
   }
 
   &__join-btn {
+    background-color: transparent;
+    border: none;
     color: $blue-900;
     cursor: pointer;
     font-family: "Oswald", sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
+    outline: none;
+    padding: 0;
     transition: 0.4s;
+    line-height: 1;
 
     &:hover {
       color: $black;
