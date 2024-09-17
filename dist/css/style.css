@@ -1128,7 +1128,6 @@ body {
   backdrop-filter: blur(2px);
   border: none;
   height: 100vh;
-  justify-content: center;
   left: 0;
   overflow: auto;
   padding-block: 1rem;
@@ -1161,6 +1160,13 @@ body {
   .dialog {
     padding-block: 2rem;
   }
+}
+.dialog__flexContainer {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 }
 .dialog__inner {
   background-color: #f5fbff;
