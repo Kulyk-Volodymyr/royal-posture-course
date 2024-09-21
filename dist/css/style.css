@@ -2220,7 +2220,7 @@ body {
 .warning__closed {
   display: block;
   left: -2rem;
-  opacity: 0.5;
+  opacity: 0.6;
   position: absolute;
   top: 0;
   -webkit-transform: scale(0.7);
@@ -2243,7 +2243,7 @@ body {
 
 @-webkit-keyframes warning-close-icon {
   from {
-    opacity: 0.5;
+    opacity: 0.6;
     -webkit-transform: scale(0.7) rotate(0deg);
             transform: scale(0.7) rotate(0deg);
   }
@@ -2263,7 +2263,7 @@ body {
 
 @keyframes warning-close-icon {
   from {
-    opacity: 0.5;
+    opacity: 0.6;
     -webkit-transform: scale(0.7) rotate(0deg);
             transform: scale(0.7) rotate(0deg);
   }

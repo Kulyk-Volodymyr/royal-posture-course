@@ -88,7 +88,7 @@
   &__closed {
     display: block;
     left: -2rem;
-    opacity: 0.5;
+    opacity: 0.6;
     position: absolute;
     top: 0;
     transform: scale(0.7);
@@ -103,7 +103,7 @@
 
     @keyframes warning-close-icon {
       from {
-        opacity: 0.5;
+        opacity: 0.6;
         transform: scale(0.7) rotate(0deg);
       }
       80% {
