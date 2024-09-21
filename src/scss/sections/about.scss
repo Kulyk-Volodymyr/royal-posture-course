@@ -94,14 +94,25 @@
     font-size: 1rem;
     line-height: 1.5;
     position: relative;
+    transition: all 0.8s ease-out;
     @include screen-min-1024 {
       width: 70%;
+    }
+
+    &_transition {
+      opacity: 0.2;
+      transform: translateX(-3rem);
     }
   }
 
   &__image {
     height: 94px;
     position: relative;
+    transition: all 0.8s ease-out;
+
+    &_transition {
+      transform: scale(0.7);
+    }
 
     &_second-image {
       @include screen-min-1024 {

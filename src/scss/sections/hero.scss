@@ -63,6 +63,7 @@ $_text-shadow: 0 0 2rem $white, 0 0 1rem $white, 0 0 0.5rem $white,
     margin-bottom: 0.5rem;
     max-width: 14rem;
     text-shadow: $_text-shadow;
+    transition: all 0.4s ease-out;
     @include screen-min-360 {
       max-width: 21rem;
     }
@@ -108,6 +109,7 @@ $_text-shadow: 0 0 2rem $white, 0 0 1rem $white, 0 0 0.5rem $white,
     line-height: 1.6;
     max-width: 9rem;
     text-shadow: $_text-shadow;
+    transition: all 0.8s ease-out;
     @include screen-min-360 {
       max-width: 13rem;
     }
@@ -129,6 +131,8 @@ $_text-shadow: 0 0 2rem $white, 0 0 1rem $white, 0 0 0.5rem $white,
 
   &__button {
     margin: 0 auto;
+    transition: all 1s ease-out;
+    width: fit-content;
     @include screen-min-600 {
       margin: 0;
     }
@@ -142,6 +146,8 @@ $_text-shadow: 0 0 2rem $white, 0 0 1rem $white, 0 0 0.5rem $white,
     right: 0;
     top: 0;
     text-shadow: $_text-shadow;
+    transition: all 1.2s ease-out;
+    width: fit-content;
     @include screen-min-360 {
       text-shadow: none;
     }
@@ -156,104 +162,9 @@ $_text-shadow: 0 0 2rem $white, 0 0 1rem $white, 0 0 0.5rem $white,
       line-height: 1.5;
     }
   }
-}
 
-/*
-.hero {
-  @include basic-padding-inline;
-  background-image: $bg-img-1;
-  background-position: center;
-  background-size: cover;
-
-  min-height: 100vh;
-
-  padding-top: 8.25rem;
-  padding-bottom: 1rem;
-  @include screen-min-768 {
-    padding-top: 13.625rem;
-    padding-bottom: 22rem;
-  }
-  @include screen-min-1024 {
-    padding-top: 6.5rem;
-    padding-bottom: 16rem;
-  }
-
-  &__inner {
-    @include max-width-large;
-  }
-
-  &__info {
-    color: $blue-900;
-    font-family: "Oswald", sans-serif;
-    @include screen-min-768 {
-      width: 36rem;
-    }
-  }
-
-  &__title {
-    font-size: 2.5rem;
-    font-weight: 500;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
-    @include screen-min-768 {
-      font-size: 4.375rem;
-      grid-column: 1/-1;
-      line-height: 1.3;
-      margin-bottom: 1.5rem;
-    }
-    @include screen-min-1024 {
-      margin-bottom: 2.25rem;
-    }
-  }
-
-  &__container {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(2, 1fr);
-    @include screen-min-768 {
-      grid-template-columns: auto;
-    }
-  }
-
-  &__subtitle {
-    font-size: 1.125rem;
-    font-weight: 400;
-    line-height: 1.6;
-    @include screen-min-768 {
-      font-size: 1.875rem;
-      line-height: 1.5;
-      width: 24rem;
-    }
-  }
-
-  &__button {
-    grid-column: 1/-1;
-    grid-row: 2/3;
-    margin: 19.25rem auto 0 auto;
-    @include screen-min-768 {
-      margin: 0 0 4rem 0;
-    }
-    @include screen-min-1024 {
-      margin: 0.5rem 0 0 0;
-    }
-  }
-
-  &__date {
-    font-size: 1rem;
-    font-weight: 400;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    line-height: 1.6;
-    text-align: right;
-    @include screen-min-768 {
-      grid-column: 1/-1;
-      grid-row: 3/4;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      text-align: left;
-    }
+  &_transition {
+    opacity: 0.4;
+    transform: scale(0.6);
   }
 }
-*/
