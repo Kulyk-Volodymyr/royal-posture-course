@@ -39,10 +39,13 @@
 
   &__text {
     font-family: "Libre Franklin", sans-serif;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.75;
+    @include screen-min-360 {
+      font-size: 1rem;
+    }
 
     &_line-height {
       line-height: 2.2;

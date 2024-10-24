@@ -24,6 +24,7 @@
   }
 
   &__sliders {
+    transition: all 1.6s ease-out;
     @include screen-min-1024 {
       display: flex;
       flex-direction: row;

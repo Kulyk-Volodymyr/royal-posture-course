@@ -66,6 +66,7 @@
     border-radius: 0.375rem;
     padding: 1rem;
     position: relative;
+    transition: all 0.8s ease-out;
     @include screen-min-768 {
       flex: 1;
     }
@@ -88,33 +89,11 @@
   &__closed {
     display: block;
     left: -2rem;
-    opacity: 0.6;
+    opacity: 0;
     position: absolute;
     top: 0;
-    transform: scale(0.7);
+    transform: scale(0);
     width: 50px;
-
-    &_animation {
-      animation-name: warning-close-icon;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      transform-origin: top center;
-    }
-
-    @keyframes warning-close-icon {
-      from {
-        opacity: 0.6;
-        transform: scale(0.7) rotate(0deg);
-      }
-      80% {
-        transform: scale(1.1) rotate(-20deg);
-        opacity: 1;
-      }
-      to {
-        transform: scale(1) rotate(0deg);
-        opacity: 1;
-      }
-    }
   }
 
   &__text {

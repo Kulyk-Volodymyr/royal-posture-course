@@ -44,6 +44,7 @@
     padding-top: 1.5rem;
     padding-inline: 1.25rem;
     position: relative;
+    transition: all 0.8s ease-out;
     @include screen-min-768 {
       padding-top: 2rem;
       padding-inline: 2rem;
@@ -78,6 +79,7 @@
     gap: 0.75rem;
     margin-bottom: 1.5rem;
     position: relative;
+    transition: all 0.8s ease-out;
 
     &-icon {
       display: block;
@@ -94,20 +96,24 @@
     font-size: 1rem;
     line-height: 1.5;
     position: relative;
+    transition: all 0.8s ease-out;
+    transition-delay: 0.4s;
   }
 
   &__mobile {
     bottom: -1.5rem;
     left: 34%;
     position: absolute;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
     width: 96px;
+    transition: all 0.4s ease-out;
+    transition-delay: 1.2s;
     @include screen-min-768 {
       bottom: 0;
       left: 0;
       margin: 1.5rem auto 0 auto;
       position: relative;
-      transform: translateX(0);
+      transform: translate(0, 0);
       width: 130px;
     }
   }
@@ -118,6 +124,8 @@
     position: absolute;
     transform: translate(-50%, 0.5rem) rotate(5deg);
     width: 180px;
+    transition: all 0.4s ease-out;
+    transition-delay: 1.6s;
     @include screen-min-768 {
       left: 50%;
       transform: translate(-50%, 0) rotate(0deg);

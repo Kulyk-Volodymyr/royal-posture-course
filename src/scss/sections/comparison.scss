@@ -27,6 +27,8 @@
 }
 
 .comparison-slider {
+  transition: all 1.6s ease-out;
+
   &__slide {
     &-inner {
       align-items: center;

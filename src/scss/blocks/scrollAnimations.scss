@@ -1,0 +1,108 @@
+/* =============== Common =============== */
+.caption_transition {
+  opacity: 0.5;
+  transform: scale(0.8);
+}
+
+.image_transition {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.opacity_transition {
+  opacity: 0;
+}
+
+.to_left_and_transparent {
+  opacity: 0;
+  transform: translateX(-3rem);
+}
+
+.button_animation {
+  animation: btnAnimation 0.8s ease-out forwards;
+}
+
+@keyframes btnAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =============== About Section =============== */
+/* =============== Warning Section =============== */
+.warning__transition {
+  opacity: 0;
+  transform: translateY(3rem);
+}
+
+.warning__closed_animation {
+  animation-name: warning-close-icon;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  transform-origin: top center;
+}
+
+@keyframes warning-close-icon {
+  from {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  80% {
+    transform: scale(1.1) rotate(-20deg);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* =============== Modules Section =============== */
+.modules__info_transition {
+  opacity: 0;
+  transform: translateY(10rem);
+}
+/* =============== Specialists Section =============== */
+/* =============== Effects Section =============== */
+.effects__effect_transition {
+  transform: translateY(4rem);
+}
+
+/* =============== Experts Section =============== */
+/* =============== Comparison Section =============== */
+/* =============== Plans Section =============== */
+/* =============== Options Section =============== */
+.options__mobile_transition {
+  transform: translate(-50%, 110%) !important;
+  @include screen-min-768 {
+    transform: translate(-14rem, 0) !important;
+  }
+}
+
+.options__fruits_transition {
+  transform: translate(-50%, 12.5rem) rotate(5deg) !important;
+  @include screen-min-768 {
+    transform: translate(-50%, 12.5rem) rotate(0deg) !important;
+  }
+}
+
+/* =============== Results Section =============== */
+/* =============== Faqs Section =============== */
+.faqs__contact_transition {
+  opacity: 0;
+  transform: translateY(6rem);
+}

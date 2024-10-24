@@ -57,6 +57,10 @@
     @include screen-min-1024 {
       padding: 1.75rem 0.75rem 1.25rem 0.75rem;
     }
+
+    &_item {
+      transition: all 0.8s ease-out;
+    }
   }
 
   &__title {
@@ -64,6 +68,7 @@
     font-size: 2.5rem;
     font-weight: 300;
     line-height: 1.5;
+    transition: all 0.8s ease-out;
   }
 
   &__subtitle {
@@ -72,6 +77,7 @@
     flex-direction: row;
     gap: 0.5rem;
     justify-content: center;
+    transition: all 0.8s ease-out;
   }
 
   &__icon-prize {
@@ -193,4 +199,21 @@
       margin-bottom: 2.5rem;
     }
   }
+
+  &__button {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+#button-plan-i-myself {
+  animation-delay: 2s;
+}
+
+#button-plan-all-inclusive {
+  animation-delay: 1.6s;
+}
+
+#button-plan-vip {
+  animation-delay: 0.8s;
 }

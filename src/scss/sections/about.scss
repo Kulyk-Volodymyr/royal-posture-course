@@ -56,6 +56,8 @@
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    opacity: 0;
+    transform: scale(0);
     @include screen-min-1024 {
       margin-top: 4rem;
     }
@@ -81,6 +83,7 @@
     height: 100%;
     left: 0;
     position: absolute;
+    transition: all 0.8s ease-out;
     top: 0;
     width: 86%;
     @include screen-min-1024 {
@@ -98,21 +101,12 @@
     @include screen-min-1024 {
       width: 70%;
     }
-
-    &_transition {
-      opacity: 0.2;
-      transform: translateX(-3rem);
-    }
   }
 
   &__image {
     height: 94px;
     position: relative;
     transition: all 0.8s ease-out;
-
-    &_transition {
-      transform: scale(0.7);
-    }
 
     &_second-image {
       @include screen-min-1024 {

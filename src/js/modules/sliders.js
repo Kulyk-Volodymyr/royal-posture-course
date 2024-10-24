@@ -12,7 +12,6 @@ export function sliders() {
       el: ".comparison-swiper-pagination",
       type: "bullets",
       dynamicBullets: true,
-      //dynamicMainBullets: 1,
       clickable: true,
 
       renderBullet: function (index, className) {

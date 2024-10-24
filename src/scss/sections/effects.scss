@@ -45,10 +45,12 @@
   &__effect {
     text-align: center;
     width: 100%;
+    transition: all 0.8s ease-out;
   }
 
   &__illustration {
     margin-bottom: 1.5rem;
+    transition: all 0.8s ease-out;
     width: 100%;
     @include screen-min-768 {
       margin-bottom: 1.75rem;
@@ -70,5 +72,7 @@
   &__button {
     display: flex;
     justify-content: center;
+    opacity: 0;
+    transform: scale(0);
   }
 }

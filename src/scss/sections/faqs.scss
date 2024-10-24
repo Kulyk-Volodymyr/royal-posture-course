@@ -61,6 +61,7 @@
     position: sticky;
     top: 7rem;
     @include screen-min-1024 {
+      transition: all 3s ease-out;
       display: block;
     }
   }
@@ -89,11 +90,13 @@
       display: block;
       height: auto;
       width: 49px;
+      transition: all 0.4s ease-out;
     }
 
     &-text {
       font-size: 1rem;
       line-height: 2;
+      transition: all 0.4s ease-out;
     }
   }
 }
@@ -101,6 +104,8 @@
 .question {
   border-bottom: 1px solid $white;
   padding: 3.5rem 1.25rem 1.5rem 1.25rem;
+  word-break: break-word;
+
   &:first-child {
     padding-top: 0;
   }
@@ -118,6 +123,7 @@
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.5;
+
     transition: 0.4s;
   }
 
@@ -196,5 +202,35 @@
     line-height: 1.5;
     margin-top: 1rem;
     margin-bottom: -1rem;
+  }
+
+  &[open] summary ~ * {
+    animation: open 0.4s ease-out;
+  }
+
+  &[close] summary ~ * {
+    animation: close 0.4s ease-out;
+  }
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-2rem);
   }
 }

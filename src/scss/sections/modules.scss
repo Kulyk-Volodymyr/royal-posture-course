@@ -52,11 +52,13 @@
     float: left;
     height: 84px;
     width: auto;
+    transition: all 0.4s ease-out;
   }
 
   &__text {
     font-size: 1rem;
     line-height: 1.5;
+    transition: all 0.4s ease-out;
   }
 }
 
@@ -105,6 +107,7 @@
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.5;
+    transition: all 0.8s ease-out;
 
     &_margin-top {
       margin-top: 1rem;
@@ -116,6 +119,7 @@
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+    transition: all 0.8s ease-out;
   }
 
   &__icon {
@@ -124,12 +128,12 @@
 
   &__list {
     margin-top: 1rem;
+    transition: all 0.8s ease-out;
     @include screen-min-768 {
       margin-top: 1.25rem;
     }
 
     &_style_star {
-      //list-style: $blue-star;
       list-style: none;
       position: relative;
 
@@ -176,6 +180,7 @@
 
   &__illustration {
     margin-bottom: 0.75rem;
+    transition: all 0.8s ease-out;
   }
 
   &__image {
