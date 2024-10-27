@@ -94,13 +94,32 @@
   /* ===== Arrows ===== */
   & .swiper-button-prev,
   & .swiper-button-next {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
     top: auto;
     bottom: -0.25rem;
     height: 2.25rem;
-    width: fit-content;
+    width: 3.125rem;
     @include screen-min-360 {
       bottom: 3.5rem;
     }
+    @include screen-min-480 {
+      width: 6.25rem;
+    }
+  }
+  & .swiper-button-prev {
+    justify-content: flex-start;
+  }
+
+  & .swiper-button-next {
+    justify-content: flex-end;
+  }
+
+  & .swiper-button-prev:hover &__arrow_left,
+  & .swiper-button-next:hover &__arrow_right {
+    transform: translateX(0rem);
   }
 
   & .swiper-button-prev::after,
@@ -111,9 +130,15 @@
   &__arrow {
     display: block;
     height: auto;
-    width: 3.125rem;
-    @include screen-min-480 {
-      width: 6.25rem;
+    width: 6.25rem;
+    transition: all 0.2s;
+
+    &_left {
+      transform: translateX(0.5rem);
+    }
+
+    &_right {
+      transform: translateX(-0.5rem);
     }
   }
 }

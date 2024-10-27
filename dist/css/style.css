@@ -1424,6 +1424,12 @@ body {
   max-width: 40rem;
   padding: 1.5rem 1rem;
   position: relative;
+  -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+          transform: scale(0.5);
+  opacity: 0;
+  -webkit-animation: modal 0.4s ease-out forwards;
+          animation: modal 0.4s ease-out forwards;
 }
 
 .dialog__close-button {
@@ -1740,6 +1746,22 @@ body {
 
   to {
     background-position: left;
+  }
+}
+
+@-webkit-keyframes modal {
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes modal {
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -2934,12 +2956,40 @@ body {
 
 .expert-info-slider .swiper-button-prev,
 .expert-info-slider .swiper-button-next {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
   top: auto;
   bottom: -0.25rem;
   height: 2.25rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 3.125rem;
+}
+
+.expert-info-slider .swiper-button-prev {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.expert-info-slider .swiper-button-next {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.expert-info-slider .swiper-button-prev:hover .expert-info-slider__arrow_left,
+.expert-info-slider .swiper-button-next:hover .expert-info-slider__arrow_right {
+  -webkit-transform: translateX(0rem);
+      -ms-transform: translateX(0rem);
+          transform: translateX(0rem);
 }
 
 .expert-info-slider .swiper-button-prev::after,
@@ -2950,7 +3000,21 @@ body {
 .expert-info-slider__arrow {
   display: block;
   height: auto;
-  width: 3.125rem;
+  width: 6.25rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.expert-info-slider__arrow_left {
+  -webkit-transform: translateX(0.5rem);
+      -ms-transform: translateX(0.5rem);
+          transform: translateX(0.5rem);
+}
+
+.expert-info-slider__arrow_right {
+  -webkit-transform: translateX(-0.5rem);
+      -ms-transform: translateX(-0.5rem);
+          transform: translateX(-0.5rem);
 }
 
 .expert-details-slider {
@@ -3062,6 +3126,13 @@ body {
   visibility: hidden;
 }
 
+.comparison-slider .swiper-button-prev:hover .comparison-slider__arrow_left,
+.comparison-slider .swiper-button-next:hover .comparison-slider__arrow_right {
+  -webkit-transform: translateX(0rem);
+      -ms-transform: translateX(0rem);
+          transform: translateX(0rem);
+}
+
 .comparison-slider .swiper-button-prev::after,
 .comparison-slider .swiper-button-next::after {
   content: "";
@@ -3071,6 +3142,20 @@ body {
   display: block;
   height: auto;
   width: 3.125rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.comparison-slider__arrow_left {
+  -webkit-transform: translateX(0.5rem);
+      -ms-transform: translateX(0.5rem);
+          transform: translateX(0.5rem);
+}
+
+.comparison-slider__arrow_right {
+  -webkit-transform: translateX(-0.5rem);
+      -ms-transform: translateX(-0.5rem);
+          transform: translateX(-0.5rem);
 }
 
 .comparison-slider .swiper-pagination {
@@ -3099,11 +3184,21 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  -webkit-transition: all 0.4s !important;
+  transition: all 0.4s !important;
+}
+
+.comparison-slider .swiper-pagination-bullet:hover {
+  background-color: #c5e8fd;
 }
 
 .comparison-slider .swiper-pagination-bullet-active {
   background-color: #136ca0;
   color: #fafafa;
+}
+
+.comparison-slider .swiper-pagination-bullet-active:hover {
+  background-color: #136ca0;
 }
 
 .plans {
@@ -4021,7 +4116,8 @@ body {
     padding-inline: 2.5rem;
   }
 
-  .expert-info-slider__arrow {
+  .expert-info-slider .swiper-button-prev,
+  .expert-info-slider .swiper-button-next {
     width: 6.25rem;
   }
 
@@ -4031,6 +4127,7 @@ body {
 
   .comparison-slider .swiper-button-prev,
   .comparison-slider .swiper-button-next {
+    overflow: hidden;
     visibility: visible;
     top: auto;
     bottom: 0rem;

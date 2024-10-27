@@ -76,12 +76,18 @@
   & .swiper-button-next {
     visibility: hidden;
     @include screen-min-480 {
+      overflow: hidden;
       visibility: visible;
       top: auto;
       bottom: 0rem;
       height: 2.5rem;
       width: fit-content;
     }
+  }
+
+  & .swiper-button-prev:hover &__arrow_left,
+  & .swiper-button-next:hover &__arrow_right {
+    transform: translateX(0rem);
   }
 
   & .swiper-button-prev::after,
@@ -93,6 +99,15 @@
     display: block;
     height: auto;
     width: 3.125rem;
+    transition: all 0.2s;
+
+    &_left {
+      transform: translateX(0.5rem);
+    }
+
+    &_right {
+      transform: translateX(-0.5rem);
+    }
   }
 
   /* ===== Pagination =====*/
@@ -124,10 +139,19 @@
     transform: scale(1);
     background-color: $white;
     width: fit-content;
+    transition: all 0.4s !important;
+
+    &:hover {
+      background-color: $blue-100;
+    }
 
     &-active {
       background-color: $blue-800;
       color: $white;
+
+      &:hover {
+        background-color: $blue-800;
+      }
     }
   }
 }

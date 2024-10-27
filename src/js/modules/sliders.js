@@ -46,12 +46,15 @@ export function sliders() {
     grabCursor: true,
     loop: true,
     autoHeight: false,
-    spaceBetween: 32,
+    spaceBetween: 48,
     speed: 800,
+    effect: "slide",
+    /*
     effect: "fade",
     fadeEffect: {
       crossFade: true,
     },
+    */
     initialSlide: 0,
     slidesPerView: 1,
   });
@@ -64,12 +67,15 @@ export function sliders() {
     grabCursor: true,
     loop: true,
     autoHeight: false,
-    spaceBetween: 32,
+    spaceBetween: 48,
     speed: 800,
+    effect: "slide",
+    /*
     effect: "fade",
     fadeEffect: {
       crossFade: true,
     },
+    */
     initialSlide: 0,
     slidesPerView: 1,
   });
